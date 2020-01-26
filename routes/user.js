@@ -49,11 +49,14 @@ router.get('/test',(req,res)=>{
 })
 
 router.get('/:id',(req,res)=>{
- usermodel.findOne({_id: req.params.id}).then(result => {
-        res.send({result})
+    console.log("id",req.params.id)
+ usermodel.findOne({"os.type.flavor.name": req.params.id}).then(result => {
+        res.send({"result" :result})
 
     })
 })
+
+
 
 
 // router.get('/match',(req,res)=>{

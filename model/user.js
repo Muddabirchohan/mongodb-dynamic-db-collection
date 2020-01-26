@@ -13,6 +13,16 @@ const userSchema = new Schema({
         },
         timestamp: String
     }
+// })
+
+// Ser: String,
+// Typ: String,
+// Fla: Number,
+// OS: String,
+// Com: String,
+// Mod: String,
+// price: String
+
 })
 
 const usermodel = mongoose.model('users',userSchema);
